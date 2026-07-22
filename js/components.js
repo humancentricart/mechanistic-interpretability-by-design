@@ -9,6 +9,10 @@ const COMPONENTS = [
   { id: "footer-component", path: "components/footer.html" },
 ];
 
+const PAGE_COMPONENTS = [
+  { id: "presenters-full-component", path: "components/presenters-full.html" },
+];
+
 export async function loadComponent({ id, path }) {
   const container = document.getElementById(id);
   if (!container) return;
@@ -28,4 +32,5 @@ export async function loadComponent({ id, path }) {
 
 export async function loadPageComponents() {
   await Promise.all(COMPONENTS.map(loadComponent));
+  await Promise.all(PAGE_COMPONENTS.map(loadComponent));
 }

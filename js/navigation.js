@@ -15,6 +15,10 @@ export function initializeNavigation() {
       return href.includes("other-versions");
     }
 
+    if (currentPath.toLowerCase().includes("presenters")) {
+      return href.includes("presenters");
+    }
+
     if (currentHash.includes("presenters")) {
       return href.includes("presenters");
     }
