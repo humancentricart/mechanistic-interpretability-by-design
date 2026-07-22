@@ -148,6 +148,19 @@ h2 {
   margin-bottom: 40px;
 }
 
+.intro-overview {
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8fbff 0%, #eff6fc 100%);
+  border: 1px solid #e4edf7;
+  box-shadow: 0 8px 22px rgba(44, 62, 80, 0.06);
+}
+
+.dark-mode .intro-overview {
+  background: linear-gradient(135deg, #2b2b2b 0%, #333a45 100%);
+  border-color: #4e5968;
+}
+
 .presenters-page-intro {
   margin-bottom: 24px;
 }
