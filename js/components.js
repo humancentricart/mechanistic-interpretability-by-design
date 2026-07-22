@@ -2,12 +2,10 @@ const COMPONENTS = [
   { id: "nav-component", path: "components/nav.html" },
   { id: "header-component", path: "components/header.html" },
   { id: "links-component", path: "components/links.html" },
-  { id: "demo-video-component", path: "components/demo-video.html" },
-  { id: "abstract-component", path: "components/abstract-section.html" },
-  { id: "content-sections-component", path: "components/content-sections.html" },
-  { id: "galleries-component", path: "components/galleries.html" },
-  { id: "extra-videos-component", path: "components/extra-videos.html" },
-  { id: "references-component", path: "components/references.html" },
+  { id: "abstract-section", path: "components/abstract-section.html" },
+  { id: "content-section", path: "components/content-section.html" },
+  { id: "program-section", path: "components/program-section.html" },
+  { id: "presenters-section", path: "components/presenters-section-dummy.html" },
   { id: "footer-component", path: "components/footer.html" },
 ];
 
