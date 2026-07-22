@@ -4,6 +4,38 @@ function copyBibTeX() {
     navigator.clipboard.writeText(bibTexText);
     alert("BibTeX citation copied to clipboard!");
   }
+
+  async function loadComponent(containerId, filePath) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    try {
+      const response = await fetch(filePath);
+      if (!response.ok) {
+        throw new Error(`Failed to load ${filePath}: ${response.status}`);
+      }
+      container.innerHTML = await response.text();
+    } catch (error) {
+      console.error(error);
+      container.innerHTML = `<p>Unable to load ${filePath}</p>`;
+    }
+  }
+
+  async function loadPageComponents() {
+    await Promise.all([
+      loadComponent("nav-component", "components/nav.html"),
+      loadComponent("header-component", "components/header.html"),
+      loadComponent("links-component", "components/links.html"),
+      loadComponent("demo-video-component", "components/demo-video.html"),
+      loadComponent("abstract-component", "components/abstract-section.html"),
+      loadComponent("content-sections-component", "components/content-sections.html"),
+      loadComponent("galleries-component", "components/galleries.html"),
+      loadComponent("extra-videos-component", "components/extra-videos.html"),
+      loadComponent("references-component", "components/references.html"),
+      loadComponent("footer-component", "components/footer.html")
+    ]);
+  }
+
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
     document.querySelector(".nav").classList.toggle("dark-mode");
@@ -143,7 +175,9 @@ function copyBibTeX() {
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", async () => {
+    await loadPageComponents();
+
     const imageCarousel = new Carousel(
       document.querySelector("#imageCarousel"),
       3000
