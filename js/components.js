@@ -5,7 +5,7 @@ const COMPONENTS = [
   { id: "abstract-section", path: "components/abstract-section.html" },
   { id: "content-section", path: "components/content-section.html" },
   { id: "program-section", path: "components/program-section.html" },
-  { id: "presenters-section", path: "components/presenters-section-dummy.html" },
+  { id: "presenters-section", path: "components/presenters-section.html" },
   { id: "footer-component", path: "components/footer.html" },
 ];
 
