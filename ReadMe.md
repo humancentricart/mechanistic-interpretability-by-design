@@ -1,68 +1,39 @@
-# iNdra Page Template: This is a Website / GitHub Page Template for Research Papers / Academic Papers [Free] [v1]
+# Mechanistic Interpretability by Design
 
-> Demo Page - https://indramal.github.io/iNdra-GitHub-Page-Template-For-Resarch/
+This repository contains a landing page for the tutorial "Neural Networks meet Explicit Knowledge Representation: Towards Mechanistic Interpretability and Neuro-symbolic Modeling by-design".
 
-You can free to borrow from this template for your own personal use. Please do not remove below code of the template mentioned to about this template.
+The site is built as a lightweight static webpage and uses a template-based structure for academic content presentation. The original template was created by [Indramal](https://github.com/indramal), and this project adapts it for the specific tutorial content presented here.
 
-## Included
+## What this repository contains
 
-* SEO tags
-* All paper sections (Abstract,Introduction,Methodology, Results, Conclusion,BibTeX,Acknowledgement)
-* Authers details
-* BibTex Copy to Clipboard button - Reader can easily copy it
-* Pre-built codes
-  * Image Gallery - Auto Slideshow
-  * Video Gallery - Auto Slideshow
-  * Demo Video
-  * Demo Videos List
-* Dark Mode
-* Menu Bar
-* Scroll Up Button
+This repo includes:
 
-## Simple Steps
+- a landing page for the tutorial
+- a structured header with the tutorial title, authors, affiliation, and event details
+- an abstract section summarizing the tutorial's motivation and scope
+- a content section describing the relevance of transformer-based LLMs, neuro-symbolic approaches, and mechanistic interpretability
+- a program section outlining the tutorial agenda and presenters
+- a simple navigation experience with links to the main sections and an "Other versions" placeholder page
+- a footer and basic interactive features such as dark mode and smooth scrolling
 
-Step 1: Fork this repo or download this repo
+## Tutorial overview
 
-Step 2: Edit index.html file (Comments included)
+The tutorial focuses on the idea that transformer-based Large Language Models can be better understood through neuro-symbolic, ontology-grounded, and mechanistic interpretability approaches. It explores how neural networks on discrete symbols can be studied as holistic reasoners, how memorization and generalization interact with model behavior, and how transparent architectures can be designed for symbolic knowledge modeling.
 
-Step 3: Create your own repo for your research in your GitHub account and upload files
+## Main sections
 
-Step 4: Creare a page for that (Repo Setting --> Pages --> Select Brach and Save then GitHub Action will run and give Page URL for your page)
+- Abstract: introduces the tutorial's goals and framing within knowledge representation and explainable reasoning.
+- Content: presents the background, motivation, and core research questions behind the tutorial.
+- Program: outlines the tutorial schedule, including the introduction, preliminaries, architecture analysis, break, language-model sessions, generalization topics, and future directions.
 
-## index.html File Edit Help
+## Repository structure
 
-If you know web development, you can edit the index.html file and also script.js and style.css files.
+- [index.html](index.html): main landing page
+- [components](components): reusable HTML components for the page sections
+- [js](js): JavaScript modules for navigation, UI behavior, component loading, and carousels
+- [style.css](style.css): shared styling for the site
+- [other-versions.html](other-versions.html): placeholder page for additional versions of the tutorial
 
-This has main step and step 1 to 10. index.html file also has comments for each step. If you have any query, please contact me.
+## Notes
 
-**Steps:**
-
-Main Step: Edit Page Title (Edit SEO tags if you can, it will help for Google Search)
-
-Step 1: Header Part (Authers and Other Details)
-
-Step 2: Button for links
-
-Step 3: Add your paper abstract
-
-Step 4: Add your paper introduction
-
-Step 5: Add your paper methodology
-
-Step 6: Add your paper results
-
-Step 7: Add your paper conclusion
-
-Step 8: Add your paper bibtex
-
-Step 9: Add your paper acknowledgements
-
-Step 10: Edit page footer
-
----
-
-Please send me feedback on [GitHub](https://github.com/indramal/iNdra-GitHub-Page-Template-For-Resarch/issues)
-
-> Made with ❤️ by [Indramal](https://github.com/indramal)
-
-![Visitor Count](https://profile-counter.glitch.me/indramalgithubpagetemplate/count.svg)
+This project is a content-focused adaptation of an academic website template. The repository is intended to host the tutorial information and present it in an accessible, polished web format.
