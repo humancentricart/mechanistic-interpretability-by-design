@@ -11,6 +11,8 @@ function resolveNavHref(page) {
       return `${prefix}ekaw/index.html`;
     case "presenters":
       return `${prefix}presenters.html`;
+    case "other-versions":
+      return `${prefix}other-versions.html`;
     default:
       return `${prefix}index.html`;
   }
@@ -33,11 +35,13 @@ export function initializeNavigation() {
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const activePage = currentPath.toLowerCase().includes("presenters")
     ? "presenters"
-    : pathname.includes("/iswc/")
-      ? "iswc"
-      : pathname.includes("/ekaw/")
-        ? "ekaw"
-        : "main";
+    : currentPath.toLowerCase().includes("other-versions")
+      ? "other-versions"
+      : pathname.includes("/iswc/")
+        ? "iswc"
+        : pathname.includes("/ekaw/")
+          ? "ekaw"
+          : "main";
 
   const activeLink = links.find((link) => link.getAttribute("data-nav-page") === activePage);
 
