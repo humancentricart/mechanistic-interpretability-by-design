@@ -1,5 +1,5 @@
 function resolveNavHref(page) {
-  const isNested = window.location.pathname.includes("/iswc/") || window.location.pathname.includes("/ekaw/");
+  const isNested = ["/iswc/", "/ekaw/", "/cikm/"].some((directory) => window.location.pathname.includes(directory));
   const prefix = isNested ? "../" : "";
 
   switch (page) {
@@ -9,6 +9,8 @@ function resolveNavHref(page) {
       return `${prefix}iswc/index.html`;
     case "ekaw":
       return `${prefix}ekaw/index.html`;
+    case "cikm":
+      return `${prefix}cikm/index.html`;
     case "presenters":
       return `${prefix}presenters.html`;
     case "other-versions":
@@ -41,6 +43,8 @@ export function initializeNavigation() {
         ? "iswc"
         : pathname.includes("/ekaw/")
           ? "ekaw"
+          : pathname.includes("/cikm/")
+            ? "cikm"
           : "main";
 
   const activeLink = links.find((link) => link.getAttribute("data-nav-page") === activePage);

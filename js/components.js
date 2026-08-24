@@ -1,5 +1,5 @@
 function resolvePath(path) {
-  const isNested = window.location.pathname.includes("/iswc/") || window.location.pathname.includes("/ekaw/");
+  const isNested = ["/iswc/", "/ekaw/", "/cikm/"].some((directory) => window.location.pathname.includes(directory));
   return isNested ? `../${path}` : path;
 }
 
@@ -7,6 +7,7 @@ function getHeaderPath() {
   const pathname = window.location.pathname.toLowerCase();
   if (pathname.includes("/iswc/")) return resolvePath("components/header-iswc.html");
   if (pathname.includes("/ekaw/")) return resolvePath("components/header-ekaw.html");
+  if (pathname.includes("/cikm/")) return resolvePath("components/header-cikm.html");
   return resolvePath("components/header-main.html");
 }
 
@@ -30,7 +31,7 @@ function isExternalLink(value) {
 }
 
 function rewriteRelativePaths(html) {
-  const isNested = window.location.pathname.includes("/iswc/") || window.location.pathname.includes("/ekaw/");
+  const isNested = ["/iswc/", "/ekaw/", "/cikm/"].some((directory) => window.location.pathname.includes(directory));
 
   if (!isNested) {
     return html;

@@ -10,10 +10,11 @@ The website is available at:
 
 ## Tutorial Editions
 
-The website currently provides two conference-specific editions of the tutorial:
+The website currently provides three conference-specific editions of the tutorial:
 
 * **ISWC 2026**
 * **EKAW 2026**
+* **CIKM 2026**
 
 Each edition provides the relevant tutorial information for the corresponding venue, including the tutorial description, intended audience, content, program, and presenter information.
 
@@ -26,6 +27,7 @@ The main components include:
 * `index.html` — the main entry point, where visitors can select the tutorial edition.
 * `iswc/` — content and pages specific to the **ISWC 2026** edition.
 * `ekaw/` — content and pages specific to the **EKAW 2026** edition.
+* `cikm/` — content and pages specific to the **CIKM 2026** edition.
 * `components/` — reusable HTML components used across the website.
 * `js/` — JavaScript modules supporting navigation, component loading, interactive elements, and other website functionality.
 * `Assets/` — images and other visual assets used by the website.
