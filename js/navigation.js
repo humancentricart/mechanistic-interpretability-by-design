@@ -53,3 +53,14 @@ export function initializeNavigation() {
     activeLink.classList.add("active");
   }
 }
+
+export function initializeFooterLinks() {
+  const footerLinks = document.querySelectorAll("[data-footer-link]");
+
+  footerLinks.forEach((link) => {
+    const page = link.getAttribute("data-footer-link");
+    if (page) {
+      link.setAttribute("href", resolveNavHref(page));
+    }
+  });
+}

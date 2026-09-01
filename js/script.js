@@ -3,7 +3,7 @@
 import { copyBibTeX, toggleDarkMode, handleScroll, scrollToTop } from "./ui.js";
 import { loadPageComponents } from "./components.js";
 import { initializeCarousels } from "./carousels.js";
-import { initializeNavigation } from "./navigation.js";
+import { initializeNavigation, initializeFooterLinks } from "./navigation.js";
 
 window.copyBibTeX = copyBibTeX;
 window.toggleDarkMode = toggleDarkMode;
@@ -13,6 +13,7 @@ async function initializePage() {
   await loadPageComponents();
   initializeCarousels();
   initializeNavigation();
+  initializeFooterLinks();
 }
 
 window.addEventListener("scroll", handleScroll);
