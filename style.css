@@ -373,6 +373,18 @@ h2 {
   border-top: 1px solid #eee;
   background: #f9f9f9;
 }
+
+.footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 .nav {
   position: sticky;
   z-index: 1000;
